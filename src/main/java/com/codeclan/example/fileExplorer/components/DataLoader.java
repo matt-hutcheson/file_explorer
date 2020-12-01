@@ -1,7 +1,9 @@
 package com.codeclan.example.fileExplorer.components;
 
+import com.codeclan.example.fileExplorer.models.File;
 import com.codeclan.example.fileExplorer.models.Folder;
 import com.codeclan.example.fileExplorer.models.User;
+import com.codeclan.example.fileExplorer.repositories.FileRespoitory;
 import com.codeclan.example.fileExplorer.repositories.FolderRepository;
 import com.codeclan.example.fileExplorer.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,9 @@ public class DataLoader implements ApplicationRunner {
 
     @Autowired
     FolderRepository folderRepository;
+
+    @Autowired
+    FileRespoitory fileRespoitory;
 
     public DataLoader(){
 
@@ -52,5 +57,14 @@ public class DataLoader implements ApplicationRunner {
 
         Folder america = new Folder("America", eugene);
         folderRepository.save(america);
+
+        File ned = new File("Ned_Stark", ".got", 128L, got);
+        fileRespoitory.save(ned);
+
+        File john = new File("John_Snow", ".got", 256L, got);
+        fileRespoitory.save(john);
+
+        File saitama = new File("Saitama", ".opm", 512L, onePunch);
+        fileRespoitory.save(saitama);
     }
 }
