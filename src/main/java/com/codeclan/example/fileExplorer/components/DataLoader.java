@@ -66,5 +66,32 @@ public class DataLoader implements ApplicationRunner {
 
         File saitama = new File("Saitama", ".opm", 512L, onePunch);
         fileRespoitory.save(saitama);
+
+        File genos = new File("Genos", ".opm", 1024L, onePunch);
+        fileRespoitory.save(genos);
+
+        File boromir = new File("Boromir", ".lotr", 2048L, lotr);
+        fileRespoitory.save(boromir);
+
+        File aragorn = new File("Aragorn", ".lotr", 4096L, lotr);
+        fileRespoitory.save(aragorn);
+
+        File seigmeyer = new File("Seigmeyer", ".ds", 8192L, darkSouls);
+        fileRespoitory.save(seigmeyer);
+
+        File solaire = new File("Solaire_of_Astora", ".ds", 16384L, darkSouls);
+        fileRespoitory.save(solaire);
+
+        File burpie = new File("Burpie", ".exe", 32768L, exercises);
+        fileRespoitory.save(burpie);
+
+        File starJump = new File("Star_Jump", ".exe", 65536L, exercises);
+        fileRespoitory.save(starJump);
+
+        File eagle = new File("Bald_Eagle", ".fdm", 131072L, america);
+        fileRespoitory.save(eagle);
+
+        File nra = new File("NRA", ".fdm", 262144L, america);
+        fileRespoitory.save(nra);
     }
 }
